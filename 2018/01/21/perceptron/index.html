@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="The aim of this project is to study neural networks.I used Marc Parizeau’s course on neural networks in 2004, professor at Laval University, Canada.I ">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Serris Olivier">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Neural Network"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Home"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Neural Network - Home</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">Home</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">Home</a>
+            </li>
+        
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+        
+            <li>
+                <a href="/about.html">About</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>Neural Network</h1>
+
+
+    <span class="image main"><img src="assets/brainBackground.png" alt="" /></span>
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<img src="/assets/brainBackground.png">
+<p>The aim of this project is to study neural networks.<br>I used Marc Parizeau’s course on neural networks in 2004, professor at Laval University, Canada.<br>I was interested in the basics of neural networks to understand how they work rather than learning to use modern libraries.<br>This course requires notions of linear algebra and analysis.(What I had to acquire, especially using the 3blue1Brown and Khan academy chain)</p>
+<p>This is a neuron.<br>It operates the weighted sum of all its entries:<br>It adds up the inputs weighted by a specific weight to the input and subtracts the bias or activation threshold before returning the calculated value.<br><img src="/2018/01/21/perceptron/Neurone.png"><br>We can use a neuron to solve a problem:<br>We input the data of the problem and it gives us the solution of the problem.<br>Changing the weights of a neuron changes the final response.</p>
+<p>Here is a simplified program that uses this technique:<br>The position of a point is entered and the neural networks try to guess whether it is magenta or cyan.<br>For each example given to the neuron, its weights are modified to modulate the response.<br>The neuron will output 1 or 0 depending on whether it considers the point to be cyan or magenta.<br>Here the response of the neural networks is represented by the line drawn on the screen that allows to separate points in two categories.<br>Each time the neuron is given a new point, it learns to recognize better if the point is cyan or magenta.<br><img src="/2018/01/21/perceptron/separateurNeurone.gif"><br>You can also have a neural network to solve a problem.<br>We could then use the outputs of each neuron to find out the solution to a problem.<br><img src="/2018/01/21/perceptron/NeuralNetwork.png"><br>However, neural networks using this technique are limited and can only solve linearly separable problems.<br>With a complex point cloud that cannot be separated by a line, the network cannot find a solution that is always correct.</p>
+<p>You can then use neural networks with multiple layers.<br><img src="/2018/01/21/perceptron/multiLayerNeuralNetwork.png"></p>
+<p>It is then necessary to find algorithms that allow the network to modulate its weights to find the right answer.<br>This corresponds to the learning system.<br>The technique I studied is called gradient descent:<br><img src="/2018/01/21/perceptron/gradient.png"><br>It is about learning from a set of examples.<br>The error made by the network can be calculated. This is the difference between the output of the network and the desired output according to the example.<br>A neural network is only a set of simple operations that can be summarized by a large function.<br>We can then calculate the function that has for input the weights and for output the error made by the neural network in a specific case.<br>By taking the derivative of this function we can know how to modify weights to reduce the error.<br>Based on a large number of examples the neuron network can then learn. </p>
+<p>One example of learning is the recognition of handwritten numbers.<br>To implement this algorithm I used Michael Nielsen’s book and code.<br><a href="http://neuralnetworksanddeeplearning.com/" target="_blank" rel="noopener">http://neuralnetworksanddeeplearning.com/</a><br>It is a python implementation that uses MNIST, a database of handwritten numbers to guess which number it is.<br><img src="/2018/01/21/perceptron/mnist.png"><br>Once the learning finishes the success rate is about 94%.<br>We can retrieve the images on which the network was mistaken. We can see that mistakes sometimes seem stupid to us, or on the contrary, the number seemed very difficult to recognize.<br>The way the network recognizes a number is quite different from ours.<br><img src="/2018/01/21/perceptron/wrongNumber.png"><br>We can also adapt the code to process other image database like Fashion Mnist which has as its goal the recognition of shoe, shirt…<br><img src="/2018/01/21/perceptron/FashionMnist.png"><br>This problem is much more difficult. success rates drop on average to 84%.<br>This, however, is slightly higher than the average of errors made by humans, which is about 83.5%.</p>
+<p>##Sources :<br>Marc Parizeau :<br><a href="http://wcours.gel.ulaval.ca/2014/h/GIF4101/default/7references/reseauxdeneurones.pdf" target="_blank" rel="noopener">http://wcours.gel.ulaval.ca/2014/h/GIF4101/default/7references/reseauxdeneurones.pdf</a><br><a href="http://neuralnetworksanddeeplearning.com/" target="_blank" rel="noopener">http://neuralnetworksanddeeplearning.com/</a><br><a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank" rel="noopener">https://www.youtube.com/watch?v=aircAruvnKk</a></p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/AI/" class="button small">AI</a> <a href="/tags/Python/" class="button small">Python</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>Kommentare:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                This theme was initially developed by <a href="http://html5up.net" target="_blank">HTML5 UP</a>. It is adapted for Hexo by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a>.<br />The source code is available on <a href="https://github.com/klugjo/hexo-theme-phantom" target="_blank">GitHub</a>.
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+            <li>Hexo: <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'klugjo';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>

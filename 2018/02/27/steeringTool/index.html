@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Description-->
+    
+        <meta name="description" content="Steering behavioursThis project is an implementation of steering behaviours.( Invented by Craig W. Reynolds).Steering behaviours are designed to help ">
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="Serris Olivier">
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Steering Behaviors part 1"/>
+    
+
+    <!--Open Graph Site Name-->
+    <meta property="og:site_name" content="Home"/>
+
+    <!--Page Cover-->
+    
+        <meta property="og:image" content=""/>
+    
+
+    <!-- Title -->
+    
+    <title>Steering Behaviors part 1 - Home</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/sass/main.css">
+
+    <!--[if lt IE 8]>
+        <script src="/js/ie/html5shiv.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 8]>
+        <link rel="stylesheet" href="/sass/ie8.css">
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="/sass/ie9.css">
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- Google Analytics -->
+    
+
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Menu -->
+        <!-- Header -->
+<header id="header">
+    <div class="inner">
+
+        <!-- Logo -->
+        <a href="/" class="logo">
+            <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">Home</span>
+        </a>
+
+        <!-- Nav -->
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Menu -->
+<nav id="menu">
+    <h2>Menu</h2>
+    <ul>
+        
+            <li>
+                <a href="/">Home</a>
+            </li>
+        
+            <li>
+                <a href="/archives">Archives</a>
+            </li>
+        
+            <li>
+                <a href="/about.html">About</a>
+            </li>
+        
+    </ul>
+</nav>
+
+
+        <div id="main">
+            <div class="inner">
+
+                <!-- Main Content -->
+                
+
+    <h1>Steering Behaviors part 1</h1>
+
+
+    <span class="image main"><img src="assets/Swarm.gif" alt="" /></span>
+
+
+<!-- Gallery -->
+
+
+<!-- Content -->
+<h2 id="Steering-behaviours"><a href="#Steering-behaviours" class="headerlink" title="Steering behaviours"></a>Steering behaviours</h2><p>This project is an implementation of steering behaviours.( Invented by Craig W. Reynolds).<br>Steering behaviours are designed to help autonomous characters move in a realistic manner.<br>Each steering behavior has a simple goal, like avoiding obstacle or staying close from neighbours.<br>The combination of multiple steering behaviours results in more complex behaviours such as flocking or regimental organization.<br>The goal of this project is to explore these behaviours and make them into a small library.</p>
+<h2 id="1-Basic-steering-behavior"><a href="#1-Basic-steering-behavior" class="headerlink" title="1 Basic steering behavior :"></a>1 Basic steering behavior :</h2><h3 id="1-1-Obstacle-avoidance"><a href="#1-1-Obstacle-avoidance" class="headerlink" title="1.1 Obstacle avoidance :"></a>1.1 Obstacle avoidance :</h3><p>All agents run straight ahead, avoid obstacles and each other.<br><img src="/2018/02/27/steeringTool/ObstacleAvoidance3.gif"></p>
+<h3 id="1-2-Seek-and-flee"><a href="#1-2-Seek-and-flee" class="headerlink" title="1.2 Seek and flee :"></a>1.2 Seek and flee :</h3><p>The monsters wander around until they find a bot, then they chase him.<br>Bots wander unless they are pursued, in which case they flee.<br><img src="/2018/02/27/steeringTool/SeekAndFlee.gif"></p>
+<h2 id="2-Combination-of-steering-behaviour"><a href="#2-Combination-of-steering-behaviour" class="headerlink" title="2 Combination of steering behaviour :"></a>2 Combination of steering behaviour :</h2><h2 id="2-1-Flocking"><a href="#2-1-Flocking" class="headerlink" title="2.1 Flocking :"></a>2.1 Flocking :</h2><p>Flocking is a combination of these 3 behaviours: </p>
+<ul>
+<li>Cohesion: each agent tries to get closer to his neighbors. </li>
+<li>Separation: the opposite of cohesion, agents avoid being too close to each other. </li>
+<li>Alignment: each agent tries to go in the same direction as their neighbors. <img src="/2018/02/27/steeringTool/Flocking2.gif">
+</li>
+</ul>
+<h2 id="3-Swarming"><a href="#3-Swarming" class="headerlink" title="3 Swarming :"></a>3 Swarming :</h2><p>Swarming is not steering behaviour, it is a lighter behavior that allows simulating larger numbers of entities.<br>This technique is useful for simulating large groups of entities such as bee swarms.<br><img src="/2018/02/27/steeringTool/Swarm.gif"></p>
+<h2 id="4-Formations"><a href="#4-Formations" class="headerlink" title="4 Formations :"></a>4 Formations :</h2><img src="/2018/02/27/steeringTool/Square.gif">
+<img src="/2018/02/27/steeringTool/AllFormation2.gif">
+<h3 id="Sources"><a href="#Sources" class="headerlink" title="Sources :"></a>Sources :</h3><p>Steering Behaviors :<br><a href="https://www.red3d.com/cwr/steer/gdc99/" target="_blank" rel="noopener">https://www.red3d.com/cwr/steer/gdc99/</a><br><a href="https://gamedevelopment.tutsplus.com/series/understanding-steering-behaviors--gamedev-12732" target="_blank" rel="noopener">https://gamedevelopment.tutsplus.com/series/understanding-steering-behaviors--gamedev-12732</a><br>3D Characters and animations:<br><a href="https://www.mixamo.com/" target="_blank" rel="noopener">https://www.mixamo.com/</a></p>
+
+
+<!-- Tags -->
+
+
+
+<div class="tags">
+    <a href="/tags/C/" class="button small">C#</a> <a href="/tags/Unity/" class="button small">Unity</a> <a href="/tags/AI/" class="button small">AI</a>
+</div>
+
+
+
+<!-- Comments -->
+<div>
+    
+    <hr />
+    <h3>Kommentare:</h3>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+
+</div>
+
+
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+<footer id="footer">
+    <div class="inner">
+        <section>
+            <h2>About</h2>
+            <div>
+                This theme was initially developed by <a href="http://html5up.net" target="_blank">HTML5 UP</a>. It is adapted for Hexo by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a>.<br />The source code is available on <a href="https://github.com/klugjo/hexo-theme-phantom" target="_blank">GitHub</a>.
+            </div>
+        </section>
+        <section>
+            <h2>Follow</h2>
+            <ul class="icons">
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+        </section>
+        <ul class="copyright">
+            <li>&copy; Untitled. All rights reserved</li>
+            <li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+            <li>Hexo: <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></li>
+        </ul>
+    </div>
+</footer>
+    </div>
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- skel -->
+<script src="/js/skel.min.js"></script>
+
+<!-- Custom Code -->
+<script src="/js/util.js"></script>
+
+<!--[if lte IE 8]>
+<script src="/js/ie/respond.min.js"></script>
+<![endif]-->
+
+<!-- Custom Code -->
+<script src="/js/main.js"></script>
+
+<!-- Gallery -->
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.3.5/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'klugjo';
+
+    (function(){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+</body>
+
+</html>
